@@ -1,0 +1,37 @@
+.footer{
+    display :flex;
+    position :fixed;
+    left : 0;
+    bottom : 0;
+    width : 100%;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    background-color : darkslategray;
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.footer .footer-link{
+    display: flex;
+    flex-direction : column;
+}
+
+
+.footer .footer-link a{
+    color : white;
+    padding : 5px;
+    font-size :medium;
+    font-family: Roboto, serif;
+}
+
+.footer .footer-logo img{
+    max-width : 100px;
+    object-fit: cover;
+}
+
+.footer .footer-social img{
+    max-width : 50px;
+    object-fit: contain;
+    border-radius: 10px;
+    padding : 0 15px;
+}

@@ -1,0 +1,29 @@
+.navbar{
+    display : flex;
+    justify-content: space-between;
+    border-bottom: 2px solid lightgrey;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px;
+    height : 100px;
+    max-height : 150px;
+    align-items: center;
+}
+.navbar .navbar-logo img{
+    max-width : 200px;
+    object-fit: cover;
+    vertical-align: middle;
+    margin-left : 20px;
+}
+
+.navbar .navbar-menu a{
+    color : darkslategray;
+    padding : 30px;
+    font-size :x-large;
+    font-family: Roboto, serif;
+}
+.navbar .navbar-social img{
+    max-width : 50px;
+    object-fit: contain;
+    border-radius: 10px;
+    padding : 0 15px;
+}
+
