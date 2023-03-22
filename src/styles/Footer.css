@@ -1,14 +1,15 @@
 .footer{
     display :flex;
+    flex-direction: row;
     position :fixed;
     left : 0;
     bottom : 0;
     width : 100%;
-    justify-content: space-between;
-    /* flex-direction: column; */
-    background-color : darkslategray;
+    justify-content: space-around;
+    background-color : var(--primary-color);
     max-width: 100%;
     max-height: 150px;
+    align-items: center;
 }
 
 .footer .footer-link{
@@ -18,14 +19,14 @@
 
 
 .footer .footer-link a{
-    color : white;
+    color : var(--white-color);
     padding : 5px;
     font-size :medium;
     font-family: Roboto, serif;
 }
 
 .footer .footer-logo img{
-    max-width : 100px;
+    max-width : 150px;
     object-fit: cover;
 }
 

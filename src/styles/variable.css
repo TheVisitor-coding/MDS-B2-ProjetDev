@@ -1,0 +1,7 @@
+:root{
+    --primary-color : darkslategrey;
+    --secondary-color : lightgreen;
+    --white-color : #fceded;
+    --header-height: 80px;
+    --footer-height: 140px;
+}

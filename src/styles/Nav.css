@@ -1,7 +1,7 @@
 .navbar{
     display : flex;
     justify-content: space-between;
-    border-bottom: 2px solid lightgrey;
+    border-bottom: 2px solid var(--white-color);
     box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px;
     height : 100px;
     max-height : 150px;
@@ -15,16 +15,15 @@
 }
 
 .navbar .navbar-menu a{
-    color : darkslategray;
+    color : var(--primary-color);
     padding : 30px;
     font-size :x-large;
     font-family: Roboto, serif;
-    transition : all 300ms ease-in-out;
+    transition : all 200ms ease-in-out;
 }
 .navbar .navbar-menu a:hover{
-    background-color : darkslategray;
-    border-radius : 5px;
-    color : white;
+    border-bottom : 3px solid var(--primary-color);
+    cursor : pointer;
 }
 .navbar .navbar-social img{
     max-width : 50px;
