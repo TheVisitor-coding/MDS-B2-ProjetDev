@@ -2,7 +2,7 @@
     display : flex;
     justify-content: space-between;
     border-bottom: 2px solid var(--white-color);
-    box-shadow: rgba(0, 0, 0, 0.18) 0px 1px 2px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 20px 0px;    
     height : 100px;
     max-height : 150px;
     align-items: center;
@@ -17,13 +17,14 @@
 .navbar .navbar-menu a{
     color : var(--primary-color);
     padding : 30px;
-    font-size :x-large;
+    font-size :1.5rem;
     font-family: Roboto, serif;
     transition : all 200ms ease-in-out;
 }
 .navbar .navbar-menu a:hover{
     border-bottom : 3px solid var(--primary-color);
     cursor : pointer;
+    font-size : 1.7rem;
 }
 .navbar .navbar-social img{
     max-width : 50px;
