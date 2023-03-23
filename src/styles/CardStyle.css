@@ -4,6 +4,7 @@
     min-width: 400px;
     max-width : 400px;
     border : 1px solid var(--white-color);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 .card .card-body{
     padding : 4px 8px;
@@ -30,7 +31,8 @@
 
 .card .card-footer button {
     padding: 15px 30px;
-    background-color: lightgreen;
+    background-color: rgb(32, 143, 32);
+    color : white;
     border: none;
     border-radius: 5px;
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
