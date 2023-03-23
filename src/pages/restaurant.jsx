@@ -12,7 +12,7 @@ function Restaurant () {
 
   useEffect(() => {
     const loadData = async () => {
-      const response = await axios.get(`http://localhost:1337/api/restaurants/${id}?populate=*`)
+      const response = await axios.get(`http://localhost:1337/api/restaurants/${id}?populate[image][populate]=*&populate[dishes][populate]=*&populate[adresse][populate]=*`)
       if (response.status === 200) {
         const data = response.data.data
         setRestaurant(data)
@@ -22,17 +22,15 @@ function Restaurant () {
   }, [])
   return restaurant && (
     <>
-      <h1>Fiche Restaurant : {id}</h1>
+      <h1>{restaurant.attributes.name}</h1>
       <div>
         <FicheResto restaurant={restaurant} />
       </div>
-      <div className='cards'>
-        <CardProduct restaurant={restaurant} />
-        <CardProduct restaurant={restaurant} />
-        <CardProduct restaurant={restaurant} />
+      <div>
+        <CardProduct dishes={restaurant.attributes.dishes} />
       </div>
       <div>
-        <Map restaurantadress={restaurant.adresse} />
+        <Map address={restaurant.attributes.adresse} />
       </div>
 
     </>

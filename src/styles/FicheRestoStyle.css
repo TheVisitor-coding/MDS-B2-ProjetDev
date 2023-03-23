@@ -6,17 +6,27 @@
   align-items: center;
   padding-top : 3rem;
 }
+
 .head .head-img img{
   max-width : 600px;
   border-radius: 10px;
   box-shadow: rgba(79, 79, 79, 0.18) 3px 3px 10px;
 }
-
+.head .head-content h2{
+  font-weight :500;
+}
+.head .head-content h3{
+  font-weight :200;
+  margin-block : 0;
+}
 .head .head-content {
+  display: flex;
+  flex-direction: column;
   text-align : left;
   margin-right : 200px;
   font-family: Roboto, serif;
   font-size : large;
+  gap : 30px;
 }
 .head .head-content .head-info{
   display : flex;

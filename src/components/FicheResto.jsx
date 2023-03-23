@@ -21,7 +21,9 @@ function FicheResto ({ restaurant }) {
 
         <div className='head-content'>
           <h2>{attributes.name}</h2>
-          <h3>Délai de Livraison / Type de nourriture</h3>
+          <h3>{attributes.adresse.street} {attributes.adresse.postcode} {attributes.adresse.city}</h3>
+          <h3>{attributes.adresse.email}</h3>
+          <h3>{attributes.adresse.phone}</h3>
 
           <span className='head-info'>
             <img src='https://cdn.pixabay.com/photo/2013/07/13/13/21/information-160885_640.png' />

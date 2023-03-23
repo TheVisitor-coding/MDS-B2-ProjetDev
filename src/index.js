@@ -8,6 +8,7 @@ import Layout from './components/layout'
 import About from './pages/about'
 import Restaurants from './pages/restaurants'
 import Restaurant from './pages/restaurant'
+import Product from './pages/Product'
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,16 @@ const router = createBrowserRouter([
           },
           {
             path: ':id', // Route = /restaurants/:id_du_restaurant
-            element: <Restaurant />
+            children: [
+              {
+                path: '',
+                element: <Restaurant />
+              },
+              {
+                path: ':id',
+                element: <Product />
+              }
+            ]
           }
         ]
       }

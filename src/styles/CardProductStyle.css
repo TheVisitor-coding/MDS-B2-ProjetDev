@@ -2,52 +2,81 @@
   display :flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top : 20px;
+  margin-top : 50px;
   margin-bottom : 50px;
 }
 .card-product{
     display : flex;
     flex-direction : row;
     justify-content: space-around;
-    min-width: 350px;
-    max-width : 350px;
-    height : 130px;
+    gap : 5px;
+    min-width: 550px;
+    max-width : 550px;
+    height : 250px;
     border : 0px solid var(--primary-color);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.616) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
     margin : 0 auto;
     margin-top : 30px;
 }
-/* .card .card-left{
-  display: flex;
+.card-product .card-right img{
+  width : 270px;
+  height : 200px;
+  object-fit:cover;
+  border-radius: 10px;
+  
+}
+.card-product .card-left{
+  display : flex;
   flex-direction: column;
-  gap : 1px;
-} */
+  justify-content: space-around ;
+}
+.card-product .card-left .product-name{
+  font-size : 1.5rem;
+  font-family : Roboto, sans-serif;
+  margin-block : 0;
+  /* margin-top : 10px; */
+}
+.card-product .card-left .product-content{
+  font-size : 1rem;
+  font-family : Roboto, sans-serif;
+  margin : 10px 30px;
+}
+.card-product .card-left .product-price{
+  font-size : 1.5rem;
+  font-family : Roboto, sans-serif;
+  margin : 10px 30px;
+  font-weight: medium;
+  /* background-color: rgb(32, 143, 32); */
+}
+
 
 .card-product .card-right{
   display: flex;
+  justify-content: space-between;
   flex-direction: column;  
-  gap : 10px;
-  padding-top : 15px;
+
 }
 
 .card-product .card-right button {
-  padding: 10px 20px;
+  padding: 15px 20px;
   background-color: rgb(32, 143, 32);
   color : white;
   border: none;
-  border-radius: 5px;
+  border-radius: 0px 0px 5px 0px;
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   font-weight: bold;
   font-size : 10px;
   text-transform: uppercase;
   transition: all 200ms ease-in-out;
   cursor: pointer;
+  margin-top : 10px;
 }
 
 .card-product .card-right button:hover {
   background-color: darkslategray;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 4px 8px;
   transform: translateY(-2px);
+  border-radius: 5px;
   color: #f0f0f0;
 }
