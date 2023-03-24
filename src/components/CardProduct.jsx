@@ -1,45 +1,30 @@
-import { useNavigate } from 'react-router-dom'
-import '../styles/CardProductStyle.css'
+import DishesListItem from './ProductListItem'
 
-function CardProduct ({ dishes }) {
-  console.log(dishes.data[0].id)
-  const navigate = useNavigate()
-
-  const handleClick = () => {
-    navigate('/restaurants/' + dishes.id + '/' + dishes.data[0].id)
-  }
-
-  return dishes && dishes.data && (
-    <div className='cards'>
-      {
-      dishes.data.map(dish => {
-        const IMAGE_URL = 'http://localhost:1337'
-
-        let imageUrl = ''
-        if (dish.attributes.image) {
-          imageUrl = IMAGE_URL + dish.attributes.image.data.attributes.url
-        } else {
-          imageUrl = 'https://via.placeholder.com/'
+function DishesList ({ dishes }) {
+  // Récupération des catégories
+  const _categories = dishes.data.map(dish => dish.attributes.type)
+  const categories = [...new Set(_categories)]
+  // On prépare la liste des plats (un tableau vide)
+  const elements = []
+  for (const category of categories) {
+    const cat = (
+      <>
+        <h1 className='category-filter'>{category}</h1>
+        <div className='list'>
+          {
+          dishes.data
+            .filter(dish => dish.attributes.type === category)
+            .map(dish => {
+              return <DishesListItem key={dish.id} dish={dish} />
+            })
         }
-        return (
-          <div key={dish.id} className='card-product'>
-            <div className='card-left'>
-              <h4 className='product-name'>{dish.attributes.name}</h4>
-              <p className='product-content'>{dish.attributes.content}</p>
-              <p className='product-price'>{dish.attributes.price} €</p>
-            </div>
-
-            <div className='card-right'>
-              <img src={imageUrl} />
-              <button onClick={handleClick}>Ajouter au Panier</button>
-            </div>
-          </div>
-        )
-      })
-    }
-    </div>
-
-  )
+        </div>
+      </>
+    )
+    elements.push(cat)
+  }
+  // On obtient dans "elements" un tableau de composants React
+  return elements
 }
 
-export default CardProduct
+export default DishesList

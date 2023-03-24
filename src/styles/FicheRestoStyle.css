@@ -6,12 +6,31 @@
   align-items: center;
   padding-top : 3rem;
 }
-
+.head .head-img{
+  position: relative;
+}
 .head .head-img img{
   max-width : 600px;
   border-radius: 10px;
   box-shadow: rgba(79, 79, 79, 0.18) 3px 3px 10px;
+  transition-duration: 300ms;
+  transition-property: transform, box-shadow;
+  transition-timing-function: ease-out;
+  transform: rotate3d(0);
 }
+.head .head-img img:hover{
+  transition-duration: 500ms;
+  box-shadow: 0 5px 20px 5px #00000044;
+}
+
+/* .head .head-img .glow{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f); */
+/* } */
 .head .head-content h2{
   font-weight :500;
 }

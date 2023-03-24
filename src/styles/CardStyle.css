@@ -5,6 +5,17 @@
     max-width : 400px;
     border : 1px solid var(--white-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    margin-bottom : 50px;
+}
+.card:hover{
+    transition-duration: 150ms;
+    box-shadow: 0 5px 20px 5px #00000044;
+}
+.category-filter{
+    text-align : left;
+    margin-left : 120px;
+    font-weight : 500;
+    font-family : system-ui, sans-serif;
 }
 .card .card-body{
     padding : 4px 8px;

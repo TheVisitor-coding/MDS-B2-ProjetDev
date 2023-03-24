@@ -1,6 +1,22 @@
+import { useEffect, useState } from 'react'
 import '../styles/Nav.css'
+import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 function Menu () {
+  const [cart, setCart] = useState()
+  // TODO : terminer demain
+
+  useEffect(() => {
+    window.addEventListener('storage', (e) => {
+      console.log('STOCKAGE MIS A JOUR')
+      const savedCart = window.localStorage.getItem('CART')
+      if (savedCart) {
+        const _cart = JSON.parse(savedCart)
+        setCart(_cart)
+      }
+    })
+  }, [])
+
   return (
     <header>
       <nav>
@@ -14,7 +30,8 @@ function Menu () {
             <a href='/about'>A Propos</a>
           </div>
           <div className='navbar-social'>
-            <img src='https://shop-cdn.presse-citron.net/instagram.jpg' />
+            <AiOutlineShoppingCart size={30} />
+            <strong>{cart && cart.length}</strong>
           </div>
         </div>
       </nav>
