@@ -9,6 +9,7 @@ import About from './pages/about'
 import Restaurants from './pages/restaurants'
 import Restaurant from './pages/restaurant'
 import Product from './pages/Product'
+import Cart from './pages/Cart'
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       {
         path: '/about',
         element: <About />
+      },
+      {
+        path: '/cart',
+        element: <Cart />
       },
       {
         path: '/restaurants',

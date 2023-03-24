@@ -8,7 +8,7 @@ function Product ({ dish }) {
 
       <div className='head-content'>
         <h2>{dish.attributes.name}</h2>
-        <h3>{dish.attributes.content}</h3>
+        <h3>{dish.attributes.description}</h3>
         <h3>{dish.attributes.type}</h3>
         <h3>{dish.attributes.price}</h3>
 

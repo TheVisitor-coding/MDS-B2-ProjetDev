@@ -1,12 +1,21 @@
 import { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import '../styles/Nav.css'
 import { AiOutlineShoppingCart } from 'react-icons/ai'
 
 function Menu () {
   const [cart, setCart] = useState()
   // TODO : terminer demain
+  const navigate = useNavigate()
 
   useEffect(() => {
+    const savedCart = window.localStorage.getItem('CART')
+    if (savedCart) {
+      const _cart = JSON.parse(savedCart)
+      setCart(_cart)
+    }
+
     window.addEventListener('storage', (e) => {
       console.log('STOCKAGE MIS A JOUR')
       const savedCart = window.localStorage.getItem('CART')
@@ -17,6 +26,9 @@ function Menu () {
     })
   }, [])
 
+  const handleCart = () => {
+    navigate('/cart')
+  }
   return (
     <header>
       <nav>
@@ -29,9 +41,9 @@ function Menu () {
             <a href='/restaurants'>Les Restaurants</a>
             <a href='/about'>A Propos</a>
           </div>
-          <div className='navbar-social'>
+          <div className='navbar-cart' onClick={handleCart}>
             <AiOutlineShoppingCart size={30} />
-            <strong>{cart && cart.length}</strong>
+            <span>{cart && cart.length}</span>
           </div>
         </div>
       </nav>
